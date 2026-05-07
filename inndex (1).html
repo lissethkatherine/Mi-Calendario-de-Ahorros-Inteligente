@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Arsenal of Lisseth</title>
+<!-- Fonts: EB Garamond for Headlines, Manrope for Body -->
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .font-headline { font-family: 'EB Garamond', serif; }
+        .font-body { font-family: 'Manrope', sans-serif; }
+        
+        /* Custom scrollbar for terminal feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #faf5ee; }
+        ::-webkit-scrollbar-thumb { background: #d8d0c8; border-radius: 10px; }
+        
+        .shimmer-text {
+            background: linear-gradient(90deg, #c2652a 0%, #f0a878 50%, #c2652a 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes slideIn { 
+            from { transform: translateX(100%); opacity: 0; } 
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#3a2020",
+                        "secondary": "#78706a",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "on-background": "#3a302a",
+                        "primary": "#c2652a",
+                        "tertiary-fixed": "#fce0e0",
+                        "secondary-fixed-dim": "#cec6be",
+                        "on-primary-fixed": "#401a08",
+                        "on-error-container": "#7a1a10",
+                        "surface": "#faf5ee",
+                        "secondary-fixed": "#eae2da",
+                        "on-secondary-container": "#605850",
+                        "inverse-primary": "#f0a878",
+                        "tertiary": "#8c3c3c",
+                        "on-secondary": "#ffffff",
+                        "error": "#c0392b",
+                        "primary-fixed-dim": "#f0a878",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#3a302a",
+                        "outline": "#9a9088",
+                        "primary-container": "#e08850",
+                        "on-primary-container": "#fbe8d8",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "surface-container-low": "#f6f0e8",
+                        "surface-tint": "#c2652a",
+                        "surface-bright": "#faf5ee",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcd6cc",
+                        "surface-container-high": "#ece6dc",
+                        "inverse-on-surface": "#faf5ee",
+                        "on-error": "#ffffff",
+                        "on-surface": "#3a302a",
+                        "surface-container-highest": "#e6e0d6",
+                        "tertiary-container": "#d47070",
+                        "on-secondary-fixed": "#2a2420",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "surface-container": "#f2ece4",
+                        "primary-fixed": "#fbe8d8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#504840",
+                        "error-container": "#fce4e0",
+                        "on-tertiary-fixed": "#2e1515",
+                        "surface-variant": "#ece6dc",
+                        "outline-variant": "#d8d0c8",
+                        "on-surface-variant": "#605850",
+                        "background": "#faf5ee",
+                        "secondary-container": "#eae2da"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Eb Garamond"],
+                        "display": ["Eb Garamond"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Sidebar Navigation (SideNavBar Anchor) -->
+<aside class="hidden md:flex flex-col p-6 space-y-4 bg-surface-container-low dark:bg-surface-container-lowest border-r border-outline-variant/60 docked left-0 h-screen w-72 shrink-0">
+<div class="mb-8">
+<h2 class="font-headline text-xl text-on-surface">The Arsenal</h2>
+<p class="text-xs text-on-surface-variant">Gear Progress</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-transform duration-200" href="#keyboard">
+<span class="material-symbols-outlined">keyboard</span>
+<span class="text-sm">Keyboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all" href="#mouse">
+<span class="material-symbols-outlined">mouse</span>
+<span class="text-sm">Mouse</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all" href="#monitor">
+<span class="material-symbols-outlined">monitor</span>
+<span class="text-sm">Monitor</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all" href="#headset">
+<span class="material-symbols-outlined">headset</span>
+<span class="text-sm">Headset</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all" href="#cpu">
+<span class="material-symbols-outlined">memory</span>
+<span class="text-sm">CPU</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all" href="#chair">
+<span class="material-symbols-outlined">chair</span>
+<span class="text-sm">Chair</span>
+</a>
+</nav>
+<button class="w-full text-left flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant rounded-lg" id="reset-btn">
+<span class="material-symbols-outlined">restart_alt</span>
+<span class="text-sm">Reset</span>
+</button>
+<div class="mt-4 p-4 bg-surface-container-high rounded-xl flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed overflow-hidden">
+<img alt="Lisseth Zapata Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a young woman with a confident expression, styled as a high-end editorial portrait. She is set against a warm, minimalist background with soft, golden-hour studio lighting. The color palette features earthy terracotta and warm linen tones, reflecting a sophisticated, modern professional aesthetic." src="https://img.freepik.com/vector-gratis/icono-aislado-pelo-largo-mujer-joven_24911-109709.jpg?semt=ais_hybrid&w=740&q=80"/>
+</div>
+<div>
+<p class="text-xs font-bold">Lisseth Zapata</p>
+<p class="text-[10px] text-on-surface-variant">Backend Developer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 h-screen overflow-y-auto relative bg-surface p-6 md:p-10 space-y-10">
+<!-- Header (TopNavBar Anchor Integration) -->
+<header class="flex flex-col space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="shimmer-text font-headline text-5xl font-bold tracking-tight">Lisseth Zapata</h1>
+<p class="text-secondary font-body mt-2 tracking-wide">Backend Developer | <span class="italic">Construyendo mi arsenal, un ahorro a la vez</span></p>
+</div>
+<div class="hidden lg:flex gap-4 items-center">
+<span class="text-xs font-bold text-primary font-mono">{ }</span>
+<span class="text-xs font-bold text-tertiary font-mono">[]</span>
+<span class="text-xs font-bold text-secondary font-mono">;</span>
+</div>
+</div>
+<div class="relative w-full h-3 bg-surface-container-highest rounded-full overflow-hidden shadow-inner" role="progressbar">
+<div class="absolute top-0 left-0 h-full bg-primary shadow-[0_0_15px_rgba(194,101,42,0.4)] transition-all duration-1000" style="width: 65%;"></div>
+</div>
+</header>
+<!-- Stats Grid (Bento Style) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm" data-stat="saved">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Ahorrado</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold text-primary">$4.2M</span>
+<span class="text-[10px] text-secondary font-mono">COP</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm" data-stat="remaining">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Faltante</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold text-tertiary">$2.8M</span>
+<span class="text-[10px] text-secondary font-mono">COP</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm" data-stat="quincenas">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Quincenas rest.</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold text-on-surface">14</span>
+<span class="text-[10px] text-secondary font-mono">STEP_INDEX</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30 flex flex-col justify-between shadow-sm" data-stat="unlocked">
+<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-4">Equipos desbloq.</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-bold text-on-surface">2</span>
+<span class="text-[10px] text-secondary font-mono">/ 6</span>
+</div>
+</div>
+</section>
+<!-- Main Content: Calendar/Fortnights -->
+<section class="space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Plan de Ejecución 2026</h3>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Pendiente
+                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> En Progreso
+                    </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completado
+                    </span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Month Card Example -->
+<div class="bg-surface-container p-6 rounded-2xl space-y-4">
+<h4 class="font-headline text-xl text-on-surface border-b border-outline-variant/30 pb-2">Enero</h4>
+<div class="space-y-3">
+<!-- Fortnight 1 -->
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl group transition-all hover:ring-1 hover:ring-primary/20" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 1</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text" value="$ 350.000"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold" data-status-badge="">DONE</span>
+</div>
+<!-- Fortnight 2 -->
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl group transition-all hover:ring-1 hover:ring-primary/20" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 2</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text" value="$ 350.000"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold" data-status-badge="">RUNNING</span>
+</div>
+</div>
+</div>
+<!-- Repeat Month Card Structure for Feb/Mar to show grid -->
+<div class="bg-surface-container p-6 rounded-2xl space-y-4 opacity-80">
+<h4 class="font-headline text-xl text-on-surface border-b border-outline-variant/30 pb-2">Febrero</h4>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 1</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container text-[10px] font-bold" data-status-badge="">WAIT</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 2</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container text-[10px] font-bold" data-status-badge="">WAIT</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-2xl space-y-4 opacity-80">
+<h4 class="font-headline text-xl text-on-surface border-b border-outline-variant/30 pb-2">Marzo</h4>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 1</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container text-[10px] font-bold" data-status-badge="">WAIT</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-xl" data-quincena-row="">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline text-primary focus:ring-primary transition-all" type="checkbox"/>
+<div>
+<p class="text-xs font-bold">Quincena 2</p>
+<input class="bg-transparent border-none p-0 text-sm font-mono text-secondary focus:ring-0 w-24" placeholder="$ 0.00" type="text"/>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container text-[10px] font-bold" data-status-badge="">WAIT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN MOUSE - NUEVA
+     ============================================ -->
+<section class="space-y-6" id="mouse">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Mouse Pro Gaming</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold">UNLOCKED</span>
+</div>
+</div>
+
+<!-- Product Image & Main Info -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/30">
+<img alt="Gaming Mouse Pro" class="w-full h-64 object-cover" src="https://media.falabella.com/falabellaCO/127666768_01/w=1004,h=1500,fit=pad"/>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
+<div>
+<h4 class="font-headline text-xl text-on-surface mb-2">Logitech G Pro X Superlight</h4>
+<p class="text-sm text-on-surface-variant">El mouse definitivo para profesionales. Ultraligero, preciso y sin compromisos.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Peso</p>
+<p class="text-sm font-bold text-on-surface">&lt; 63g</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">DPI</p>
+<p class="text-sm font-bold text-on-surface">25,600</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Conexión</p>
+<p class="text-sm font-bold text-on-surface">Wireless</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Batería</p>
+<p class="text-sm font-bold text-on-surface">70 hrs</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-on-surface-variant">Progreso de ahorro</span>
+<span class="text-xs font-bold text-primary">100%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-primary/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Precio</p>
+<p class="text-2xl font-headline font-bold text-primary">$800.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Ahorrado</p>
+<p class="text-2xl font-headline font-bold text-tertiary">$800.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Fecha compra</p>
+<p class="text-lg font-headline font-bold text-on-surface">15 Ene 2026</p>
+<p class="text-[10px] text-primary font-mono mt-1">COMPRADO ✓</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN MONITOR - NUEVA
+     ============================================ -->
+<section class="space-y-6" id="monitor">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Monitor 4K Ultrawide</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">LOCKED</span>
+</div>
+</div>
+
+<!-- Product Image & Main Info -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/30">
+<img alt="4K Monitor Ultrawide" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&amp;q=80"/>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
+<div>
+<h4 class="font-headline text-xl text-on-surface mb-2">LG UltraWide 34" 4K</h4>
+<p class="text-sm text-on-surface-variant">Productividad máxima con resolución 4K y panel IPS de colores precisos.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Tamaño</p>
+<p class="text-sm font-bold text-on-surface">34"</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Resolución</p>
+<p class="text-sm font-bold text-on-surface">4K UHD</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Panel</p>
+<p class="text-sm font-bold text-on-surface">IPS</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Refresh</p>
+<p class="text-sm font-bold text-on-surface">144Hz</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-on-surface-variant">Progreso de ahorro</span>
+<span class="text-xs font-bold text-primary">40%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%]"></div>
+</div>
+<p class="text-[10px] text-secondary mt-2">Faltan $1.320.000 COP</p>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Precio</p>
+<p class="text-2xl font-headline font-bold text-tertiary">$2.200.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Ahorrado</p>
+<p class="text-2xl font-headline font-bold text-primary">$880.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Meta</p>
+<p class="text-lg font-headline font-bold text-on-surface">Jun 2026</p>
+<p class="text-[10px] text-secondary font-mono mt-1">EN PROGRESO</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN HEADSET - NUEVA
+     ============================================ -->
+<section class="space-y-6" id="headset">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Headset ANC Premium</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">LOCKED</span>
+</div>
+</div>
+
+<!-- Product Image & Main Info -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/30">
+<img alt="Gaming Headset Wireless" class="w-full h-64 object-cover" src="https://assets.corsair.com/image/upload/f_auto,q_auto/v1690240892/akamai/pdp/headsets/hs80-max-wireless/CRSR_HS80Max_Panel4_DT_2400x1442.webp"/>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
+<div>
+<h4 class="font-headline text-xl text-on-surface mb-2">Corsair HS80 RGB Wireless</h4>
+<p class="text-sm text-on-surface-variant">Audio espacial Dolby Atmos con cancelación activa de ruido y micrófono broadcast.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Conexión</p>
+<p class="text-sm font-bold text-on-surface">Wireless</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">ANC</p>
+<p class="text-sm font-bold text-on-surface">Activo</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Batería</p>
+<p class="text-sm font-bold text-on-surface">20 hrs</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Audio</p>
+<p class="text-sm font-bold text-on-surface">Dolby Atmos</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-on-surface-variant">Progreso de ahorro</span>
+<span class="text-xs font-bold text-secondary">0%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+<p class="text-[10px] text-secondary mt-2">Faltan $1.200.000 COP</p>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Precio</p>
+<p class="text-2xl font-headline font-bold text-tertiary">$1.200.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Ahorrado</p>
+<p class="text-2xl font-headline font-bold text-secondary">$0</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Meta</p>
+<p class="text-lg font-headline font-bold text-on-surface">Ago 2026</p>
+<p class="text-[10px] text-secondary font-mono mt-1">PENDIENTE</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN CPU - NUEVA
+     ============================================ -->
+<section class="space-y-6" id="cpu">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Procesador Intel i9</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">LOCKED</span>
+</div>
+</div>
+
+<!-- Product Image & Main Info -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/30">
+<img alt="Intel Core i9 Processor" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800&amp;q=80"/>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
+<div>
+<h4 class="font-headline text-xl text-on-surface mb-2">Intel Core i9-14900K</h4>
+<p class="text-sm text-on-surface-variant">El procesador más potente para desarrollo y rendering. 24 núcleos de pura potencia.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Núcleos</p>
+<p class="text-sm font-bold text-on-surface">24 (8P+16E)</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Threads</p>
+<p class="text-sm font-bold text-on-surface">32</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Frecuencia</p>
+<p class="text-sm font-bold text-on-surface">6.0 GHz</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Cache</p>
+<p class="text-sm font-bold text-on-surface">36MB</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-on-surface-variant">Progreso de ahorro</span>
+<span class="text-xs font-bold text-secondary">0%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+<p class="text-[10px] text-secondary mt-2">Faltan $3.500.000 COP</p>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Precio</p>
+<p class="text-2xl font-headline font-bold text-tertiary">$3.500.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Ahorrado</p>
+<p class="text-2xl font-headline font-bold text-secondary">$0</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Meta</p>
+<p class="text-lg font-headline font-bold text-on-surface">Dic 2026</p>
+<p class="text-[10px] text-secondary font-mono mt-1">PENDIENTE</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+     SECCIÓN CHAIR - NUEVA
+     ============================================ -->
+<section class="space-y-6" id="chair">
+<div class="flex items-center justify-between border-b border-outline-variant/60 pb-4">
+<h3 class="font-headline text-2xl text-on-surface italic">Silla Ergonómica</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">LOCKED</span>
+</div>
+</div>
+
+<!-- Product Image & Main Info -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/30">
+<img alt="Ergonomic Office Chair" class="w-full h-64 object-cover" src="https://media.falabella.com/sodimacCO/905767_02/w=1160"/>
+</div>
+
+
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30 space-y-4">
+<div>
+<h4 class="font-headline text-xl text-on-surface mb-2">Trinity Gamer</h4>
+<p class="text-sm text-on-surface-variant">La silla ergonómica definitiva. Soporte lumbar perfecto para largas sesiones de código.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Material</p>
+<p class="text-sm font-bold text-on-surface">Mesh</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Ajustes</p>
+<p class="text-sm font-bold text-on-surface">12</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Soporte</p>
+<p class="text-sm font-bold text-on-surface">Lumbar</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold">Garantía</p>
+<p class="text-sm font-bold text-on-surface">12 años</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-on-surface-variant">Progreso de ahorro</span>
+<span class="text-xs font-bold text-secondary">0%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+<p class="text-[10px] text-secondary mt-2">Faltan $1.800.000 COP</p>
+</div>
+</div>
+</div>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Precio</p>
+<p class="text-2xl font-headline font-bold text-tertiary">$1.800.000</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Ahorrado</p>
+<p class="text-2xl font-headline font-bold text-secondary">$0</p>
+<p class="text-[10px] text-secondary font-mono mt-1">COP</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl border border-outline-variant/30">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Meta</p>
+<p class="text-lg font-headline font-bold text-on-surface">Dic 2027</p>
+<p class="text-[10px] text-secondary font-mono mt-1">PENDIENTE</p>
+</div>
+</div>
+</section>
+
+<!-- The Arsenal Gallery (Sidebar Integration as Horizontal Section) -->
+<section class="space-y-6">
+<h3 class="font-headline text-2xl text-on-surface italic">Inventario de Equipamiento</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-primary/30 flex flex-col items-center text-center space-y-3" data-equipment="keyboard">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">keyboard</span>
+</div>
+<div>
+<p class="text-xs font-bold">Teclado Mecánico</p>
+<p class="text-[10px] text-tertiary uppercase font-bold tracking-tighter">UNLOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-primary/30 flex flex-col items-center text-center space-y-3" data-equipment="mouse">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">mouse</span>
+</div>
+<div>
+<p class="text-xs font-bold">Mouse Pro</p>
+<p class="text-[10px] text-tertiary uppercase font-bold tracking-tighter">UNLOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center space-y-3 opacity-60" data-equipment="monitor">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">monitor</span>
+</div>
+<div>
+<p class="text-xs font-bold">Monitor 4K</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">LOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%]"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center space-y-3 opacity-60" data-equipment="headset">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">headset</span>
+</div>
+<div>
+<p class="text-xs font-bold">Headset ANC</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">LOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center space-y-3 opacity-60" data-equipment="cpu">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">memory</span>
+</div>
+<div>
+<p class="text-xs font-bold">Procesador i9</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">LOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center text-center space-y-3 opacity-60" data-equipment="chair">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">chair</span>
+</div>
+<div>
+<p class="text-xs font-bold">Silla Ergo</p>
+<p class="text-[10px] text-secondary uppercase font-bold tracking-tighter">LOCKED</p>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Terminal Footer -->
+<footer class="mt-auto border-t border-outline-variant/60 pt-6 pb-10">
+<div class="bg-inverse-surface text-inverse-on-surface p-4 rounded-lg font-mono text-sm relative overflow-hidden">
+<div class="flex items-center gap-2 mb-2 border-b border-on-surface-variant/20 pb-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="ml-2 opacity-50 text-xs">lisseth-zapata@arsenal:~/savings-plan</span>
+</div>
+<p class="text-primary-fixed-dim" id="terminal-text">
+                    &gt; Lisseth, tu setup no se va a comprar solo. Ejecuta el plan. <span class="animate-pulse">_</span>
+</p>
+</div>
+</footer>
+</main>
+<!-- Mobile Bottom NavBar Anchor -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container flex justify-around p-4 border-t border-outline-variant/60">
+<button class="text-primary flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Dash</span>
+</button>
+<button class="text-on-surface-variant flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">memory</span>
+<span class="text-[10px] font-bold">Gear</span>
+</button>
+<button class="text-on-surface-variant flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-bold">Plan</span>
+</button>
+<button class="text-on-surface-variant flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Config</span>
+</button>
+</nav>
+
+<script>
+/* ============================================
+   SISTEMA DE CÁLCULO DINÁMICO - ARSENAL LISSETH
+   ============================================ */
+
+// Configuración inicial
+const GOAL_TOTAL = 7000000; // Meta total en COP
+const EQUIPMENT_PRICES = {
+    keyboard: 1500000,
+    mouse: 800000,
+    monitor: 2200000,
+    headset: 1200000,
+    cpu: 3500000,
+    chair: 1800000
+};
+
+// Formatear moneda COP
+const formatCOP = (amount) => {
+    return new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(amount).replace('COP', '').trim();
+};
+
+// Calcular abreviatura (M para millones)
+const formatShort = (amount) => {
+    if (amount >= 1000000) {
+        return `$${(amount / 1000000).toFixed(1)}M`;
+    }
+    return formatCOP(amount);
+};
+
+// Calcular totales dinámicamente
+function calculateTotals() {
+    let totalSaved = 0;
+    let totalQuincenas = 0;
+    let completedQuincenas = 0;
+    
+    // Obtener todas las quincenas
+    const quincenaRows = document.querySelectorAll('[data-quincena-row]');
+    
+    quincenaRows.forEach(row => {
+        const checkbox = row.querySelector('input[type="checkbox"]');
+        const amountInput = row.querySelector('input[type="text"]');
+        
+        if (checkbox && amountInput) {
+            totalQuincenas++;
+            
+            // Parsear el monto (remover $ y puntos)
+            const amountStr = amountInput.value.replace(/[$.\s]/g, '');
+            const amount = parseInt(amountStr) || 0;
+            
+            // Si está marcada, sumar al total
+            if (checkbox.checked) {
+                totalSaved += amount;
+                completedQuincenas++;
+                
+                // Actualizar badge a DONE
+                const badge = row.querySelector('[data-status-badge]');
+                if (badge) {
+                    badge.textContent = 'DONE';
+                    badge.className = 'px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold';
+                }
+            } else {
+                // Actualizar badge a WAIT o RUNNING
+                const badge = row.querySelector('[data-status-badge]');
+                if (badge) {
+                    if (amount > 0) {
+                        badge.textContent = 'RUNNING';
+                        badge.className = 'px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold';
+                    } else {
+                        badge.textContent = 'WAIT';
+                        badge.className = 'px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container text-[10px] font-bold';
+                    }
+                }
+            }
+        }
+    });
+    
+    // Calcular faltante
+    const remaining = Math.max(0, GOAL_TOTAL - totalSaved);
+    
+    // Calcular porcentaje
+    const percentage = Math.min(100, Math.round((totalSaved / GOAL_TOTAL) * 100));
+    
+    // Calcular equipos desbloqueados
+    let unlockedEquipment = 0;
+    let currentAccumulated = 0;
+    
+    Object.entries(EQUIPMENT_PRICES).forEach(([equip, price]) => {
+        currentAccumulated += price;
+        if (totalSaved >= currentAccumulated) {
+            unlockedEquipment++;
+        }
+    });
+    
+    // Actualizar DOM
+    updateStatsDisplay(totalSaved, remaining, percentage, unlockedEquipment, completedQuincenas, totalQuincenas);
+    
+    // Guardar en localStorage
+    saveProgress();
+}
+
+// Actualizar display de estadísticas
+function updateStatsDisplay(saved, remaining, percentage, unlocked, completed, total) {
+    // Actualizar AHORRADO
+    const savedEl = document.querySelector('[data-stat="saved"] .text-3xl');
+    if (savedEl) {
+        savedEl.textContent = formatShort(saved);
+    }
+    
+    // Actualizar FALTANTE
+    const remainingEl = document.querySelector('[data-stat="remaining"] .text-3xl');
+    if (remainingEl) {
+        remainingEl.textContent = formatShort(remaining);
+    }
+    
+    // Actualizar barra de progreso
+    const progressBar = document.querySelector('[role="progressbar"] > div');
+    if (progressBar) {
+        progressBar.style.width = `${percentage}%`;
+    }
+    
+    // Actualizar EQUIPOS DESBLOQ.
+    const unlockedEl = document.querySelector('[data-stat="unlocked"] .text-3xl');
+    if (unlockedEl) {
+        unlockedEl.innerHTML = `${unlocked}<span class="text-[10px] text-secondary font-mono ml-1">/ 6</span>`;
+    }
+    
+    // Actualizar QUINCENAS REST.
+    const remainingQuincenas = total - completed;
+    const quincenasEl = document.querySelector('[data-stat="quincenas"] .text-3xl');
+    if (quincenasEl) {
+        quincenasEl.textContent = remainingQuincenas;
+    }
+    
+    // Actualizar cards de equipo en el inventario
+    updateEquipmentCards(unlocked);
+}
+
+// Actualizar cards de equipo
+function updateEquipmentCards(unlockedCount) {
+    const equipmentIds = ['keyboard', 'mouse', 'monitor', 'headset', 'cpu', 'chair'];
+    let accumulated = 0;
+    
+    equipmentIds.forEach((id, index) => {
+        const card = document.querySelector(`[data-equipment="${id}"]`);
+        if (!card) return;
+        
+        accumulated += EQUIPMENT_PRICES[id];
+        const isUnlocked = index < unlockedCount;
+        
+        const iconContainer = card.querySelector('.w-12.h-12');
+        const statusText = card.querySelector('p.text-\\[10px\\]');
+        const progressBar = card.querySelector('.w-full.h-1 div');
+        
+        if (isUnlocked) {
+            // Desbloqueado
+            card.classList.remove('opacity-60', 'border-outline-variant/30');
+            card.classList.add('border-primary/30');
+            
+            if (iconContainer) {
+                iconContainer.classList.remove('bg-surface-container-high', 'text-secondary');
+                iconContainer.classList.add('bg-primary-fixed', 'text-primary');
+            }
+            
+            if (statusText) {
+                statusText.textContent = 'UNLOCKED';
+                statusText.classList.remove('text-secondary');
+                statusText.classList.add('text-tertiary');
+            }
+            
+            if (progressBar) {
+                progressBar.style.width = '100%';
+            }
+        } else {
+            // Bloqueado
+            card.classList.add('opacity-60', 'border-outline-variant/30');
+            card.classList.remove('border-primary/30');
+            
+            if (iconContainer) {
+                iconContainer.classList.add('bg-surface-container-high', 'text-secondary');
+                iconContainer.classList.remove('bg-primary-fixed', 'text-primary');
+            }
+            
+            if (statusText) {
+                statusText.textContent = 'LOCKED';
+                statusText.classList.add('text-secondary');
+                statusText.classList.remove('text-tertiary');
+            }
+            
+            // Calcular progreso individual
+            const previousTotal = accumulated - EQUIPMENT_PRICES[id];
+            const progress = Math.min(100, Math.max(0, 
+                ((AppState.savings.saved - previousTotal) / EQUIPMENT_PRICES[id]) * 100
+            ));
+            
+            if (progressBar) {
+                progressBar.style.width = `${Math.max(0, progress)}%`;
+            }
+        }
+    });
+}
+
+// Guardar progreso en localStorage
+function saveProgress() {
+    const quincenasData = [];
+    document.querySelectorAll('[data-quincena-row]').forEach((row, index) => {
+        const checkbox = row.querySelector('input[type="checkbox"]');
+        const amountInput = row.querySelector('input[type="text"]');
+        
+        if (checkbox && amountInput) {
+            quincenasData.push({
+                id: index,
+                checked: checkbox.checked,
+                amount: amountInput.value
+            });
+        }
+    });
+    
+    localStorage.setItem('arsenal_progress', JSON.stringify({
+        quincenas: quincenasData,
+        lastUpdate: new Date().toISOString()
+    }));
+}
+
+// Cargar progreso desde localStorage
+function loadProgress() {
+    const saved = localStorage.getItem('arsenal_progress');
+    if (saved) {
+        try {
+            const data = JSON.parse(saved);
+            data.quincenas.forEach((item, index) => {
+                const row = document.querySelectorAll('[data-quincena-row]')[index];
+                if (row) {
+                    const checkbox = row.querySelector('input[type="checkbox"]');
+                    const amountInput = row.querySelector('input[type="text"]');
+                    
+                    if (checkbox) checkbox.checked = item.checked;
+                    if (amountInput) amountInput.value = item.amount;
+                }
+            });
+        } catch (e) {
+            console.error('Error loading progress:', e);
+        }
+    }
+}
+
+// Inicializar event listeners
+function initDynamicCalculations() {
+    // Escuchar cambios en checkboxes
+    document.addEventListener('change', (e) => {
+        if (e.target.type === 'checkbox' && e.target.closest('[data-quincena-row]')) {
+            calculateTotals();
+            
+            // Efecto visual de celebración si se completa
+            if (e.target.checked) {
+                showToast('¡Quincena completada! 🎉', 'success');
+            }
+        }
+    });
+    
+    // Escuchar cambios en inputs de monto
+    document.addEventListener('input', (e) => {
+        if (e.target.type === 'text' && e.target.closest('[data-quincena-row]')) {
+            // Formatear como moneda mientras escribe
+            let value = e.target.value.replace(/[^0-9]/g, '');
+            if (value) {
+                const num = parseInt(value);
+                e.target.value = '$ ' + num.toLocaleString('es-CO');
+            } else {
+                e.target.value = '$ 0.00';
+            }
+            calculateTotals();
+        }
+    });
+    
+    // Cargar progreso guardado
+    loadProgress();
+    
+    // Calcular totales iniciales
+    calculateTotals();
+}
+
+// Mostrar toast notification
+function showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `fixed top-4 right-4 z-50 px-4 py-3 rounded-xl shadow-lg font-body text-sm flex items-center gap-2 animate-[slideIn_0.3s_ease] ${
+        type === 'success' ? 'bg-primary text-on-primary' : 
+        type === 'error' ? 'bg-error text-on-error' : 
+        'bg-surface-container-high text-on-surface border border-outline-variant'
+    }`;
+    
+    const icon = type === 'success' ? 'check_circle' : type === 'error' ? 'error' : 'info';
+    toast.innerHTML = `<span class="material-symbols-outlined text-lg">${icon}</span><span>${message}</span>`;
+    
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(100%)';
+        toast.style.transition = 'all 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+// Estado global para referencia
+const AppState = {
+    savings: { saved: 0, goal: GOAL_TOTAL },
+    equipment: Object.entries(EQUIPMENT_PRICES).map(([id, price]) => ({
+        id,
+        price,
+        unlocked: false,
+        progress: 0
+    }))
+};
+
+// Terminal Typewriter Logic
+const terminal = document.getElementById('terminal-text');
+const quotes = [
+    "> Lisseth, tu setup no se va a comprar solo. Ejecuta el plan.",
+    "> El código es mejor cuando el hardware es premium. Sigue ahorrando.",
+    "> Milestone detectado: Estás más cerca del i9 de lo que crees.",
+    "> Ahorro es libertad. El arsenal se está construyendo...",
+    "> Backend logic check: Ahorro >= Precio del Monitor. ¡Pronto!"
+];
+let currentQuote = 0;
+
+function rotateQuote() {
+    terminal.innerHTML = `> ${quotes[currentQuote]} <span class="animate-pulse">_</span>`;
+    currentQuote = (currentQuote + 1) % quotes.length;
+}
+
+setInterval(rotateQuote, 6000);
+
+// Reset button
+document.getElementById('reset-btn')?.addEventListener('click', () => {
+    if (confirm('¿Estás segura de resetear todo el progreso?')) {
+        localStorage.removeItem('arsenal_progress');
+        location.reload();
+    }
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Update active state in sidebar
+            document.querySelectorAll('aside nav a').forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold', 'translate-x-1');
+                link.classList.add('text-on-surface-variant', 'hover:bg-surface-variant');
+            });
+            this.classList.remove('text-on-surface-variant', 'hover:bg-surface-variant');
+            this.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold', 'translate-x-1');
+        }
+    });
+});
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDynamicCalculations);
+} else {
+    initDynamicCalculations();
+}
+</script>
+</body></html>
